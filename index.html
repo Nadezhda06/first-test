@@ -1,118 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Форма</title>
-<style>
-body {
-	background: #FFFFFF;
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Форма обратной связи</title>
 
-}
-h1 {
-/* Задать вопрос */
-margin-left: 40px;
-margin-top: 40px;
-margin-bottom: 25px;
-font-family: Roboto;
-font-size: 24px;
-font-weight: 700;
-line-height: 20px;
-letter-spacing: 0px;
-text-align: left;
-
-/* width: 168px;
-height: 20px;
-left: 312px;
-top: 71px; 
-font-family: Roboto;
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 20px;*/
-
-}
-form {
-background: #F7F5F9;
-border: 1px solid #F7F5F9;
-width: 481px;
-height: 392px;
-border-radius: 12px;
-position: absolute;
-left: 26.56%;
-right: 26.46%;
-top: 4.04%;
-
-}
-/* #blok {
-background: #F7F5F9;
-height: 392px;
-width: 481px;
-border-radius: 12px;
-position: absolute;
-left: 26.56%;
-right: 26.46%;
-top: 4.04%;
-} */
-
-input[type="text"] {
-background-color: #FFFFFF;
-border: 1px solid #854FC8;
-margin-left: 40px;
-margin-right: 40px;
-margin-bottom: 25px;
-height: 48px;
-width: 401px;
-color: #D0C9D6;
-font-family: Roboto;
-font-size: 15px;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0px;
-text-align: left;
-/*padding: 0 10px; */
-
-vertical-align: top;
-
-/* Dropshadow 1 */
-box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
-border-radius: 6px;
-
-/* identical to box height, or 133% */
-display: flex;
-align-items: center;
-
-color: #D0C9D6;
-}
-#button {
-background-color: #6979F8;
-border: 1px solid #6979F8;
-height: 48px;
-width: 401px;	
-color: #FFFFFF;
-vertical-align: top;
-border-radius: 6px;
-font-family: Roboto;
-font-style: normal;
-font-weight: 400;
-font-size: 17px;
-line-height: 22px;
-
-/* identical to box height, or 129% */
-display: flex;
-align-items: center;
-text-align: center;
-}
-
-}
-</style>
   </head>
 <body>
-    <form method="post">
+    <form method="post" action="">
     <h1>Задать вопрос</h1>
-        <input type="text" name="name" placeholder="Фамилия Имя Отчество *" >
-        <input type="text" name="phone" placeholder="Телефон *" />
-        <input type="text" name="email" placeholder="Email" />
-        <input type="text" id="button" value="ОТПРАВИТЬ ЗАПРОС" />
+        <input type="text" id="text" name="name" placeholder="Фамилия Имя Отчество *">
+        <input type="text" id="text" name="phone" placeholder="Телефон *" >
+        <input type="text" id="text" name="email" placeholder="Email" >
+        <input type="text" id="button" value="ОТПРАВИТЬ ЗАПРОС">
     </form>
 </body>
 </html>
