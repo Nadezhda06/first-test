@@ -7,12 +7,12 @@
     <title>Форма обратной связи</title>
       </head>
 <body>
-    <form name="form" id="form" method="post">
+    <form id="form" name="form">
     <h1>Задать вопрос</h1>
         <input type="text" id="text" name="name" placeholder="Фамилия Имя Отчество *" required>
-        <input type="tel" id="text" name="phone" placeholder="Телефон *" required>
-        <input type="email" id="text" name="email" placeholder="Email" required>
-        <input type="submit" id="button" value="ОТПРАВИТЬ ЗАПРОС">
+        <input type="text" id="text" name="phone" placeholder="Телефон *" required>
+        <input type="text" id="text" name="email" placeholder="Email" required>
+        <input type="submit" id="button" value="ОТПРАВИТЬ ЗАПРОС" onclick="ValidateAndSend(document.form.name, document.form.phone, document.form.email)">
     </form>
 </body>
 </html>
