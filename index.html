@@ -9,7 +9,7 @@
           var msg   = $('#form').serialize();
            $.ajax({
              type: 'POST',
-             url: 'send.php',
+             url: 'https://60376bfd5435040017722533.mockapi.io/form',
              data: msg,
             success: function(data) {  
                 $('#form').remove(); 
