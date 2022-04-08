@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Форма обратной связи</title>
-
-  </head>
+    <script type="text/javascript">
+        function call() {
+          var msg   = $('#form').serialize();
+           $.ajax({
+             type: 'POST',
+             url: 'send.php',
+             data: msg,
+            success: function(data) {  
+                $('#form').remove(); 
+                $('#results').html(data); 
+             },
+             error:  function(xhr, str){ 
+            alert('Возникла ошибка: ' + xhr.responseCode);
+             }
+           });
+       }
+    </script>
+      </head>
 <body>
-    <form method="post" action="">
+    <form id="form" onsubmit="call()" method="post" action="/">
     <h1>Задать вопрос</h1>
-        <input type="text" id="text" name="name" placeholder="Фамилия Имя Отчество *">
-        <input type="text" id="text" name="phone" placeholder="Телефон *" >
-        <input type="text" id="text" name="email" placeholder="Email" >
-        <input type="text" id="button" value="ОТПРАВИТЬ ЗАПРОС">
+        <input type="text" id="text" name="name" placeholder="Фамилия Имя Отчество *" required>
+        <input type="tel" id="text" name="phone" placeholder="Телефон *" required>
+        <input type="email" id="text" name="email" placeholder="Email" required>
+        <input type="submit" id="button" value="ОТПРАВИТЬ ЗАПРОС">
     </form>
+    <div id="results"> </div>
 </body>
 </html>
+
