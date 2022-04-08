@@ -4,23 +4,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Форма обратной связи</title>
-    <script type="text/javascript">
-        function call() {
-          var msg   = $('#form').serialize();
-           $.ajax({
-             type: 'POST',
-             url: 'https://60376bfd5435040017722533.mockapi.io/form',
-             data: msg,
-            success: function(data) {  
-                $('#form').remove(); 
-                $('#results').html(data); 
-             },
-             error:  function(xhr, str){ 
-            alert('Возникла ошибка: ' + xhr.responseCode);
-             }
-           });
-       }
-    </script>
       </head>
 <body>
     <form id="form" onsubmit="call()" method="post">
