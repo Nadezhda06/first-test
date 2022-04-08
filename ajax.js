@@ -2,7 +2,7 @@ function ValidateAndSend(name, phone, email){
   if ((ValidateFIO(name) && ValidatePhoneNumber(phone)) && ValidateEmail(email)){
     call();
   }
-  else{}
+  else {alert}
 }
 
 function call() {
@@ -28,7 +28,7 @@ function ValidateEmail(inputText) {
     return true;
   }
   else {
-    alert("Невалидный адрес почты!");
+    alert("Неправильно введен адрес почты!");
     return false;
   }
 }
@@ -39,7 +39,7 @@ function ValidatePhoneNumber(inputText) {
     return true;
   }
   else {
-    alert("Невалидный адрес телефона!");
+    alert("Неправильно введен номер телефона!");
     return false;
   }
 }
@@ -50,7 +50,7 @@ function ValidateFIO(inputText) {
     return true;
   }
   else {
-    alert("Невалидное ФИО!");
+    alert("Неправильно введены ФИО!");
     return false;
   }
 }
